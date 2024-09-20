@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 /**
  * Meucci
  */
-public class Meucci {
+public class D404 {
 
     public static void main(String[] args) throws IOException {
         String[] posibilidades = {"X", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};

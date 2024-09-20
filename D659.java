@@ -3,7 +3,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class NumerosEgipcios {
+public class D659 {
     public static void main(String[] args) {
         Map<Character, Integer> mapa = new LinkedHashMap<>();
         Scanner sc = new Scanner(System.in);

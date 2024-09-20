@@ -4,14 +4,14 @@ import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-public class FaseGrupos implements Comparable<FaseGrupos> {
+public class D713 implements Comparable<D713> {
 
     private int id;
     private int puntos;
     private int golesF;
     private int golesC;
 
-    public FaseGrupos(int id) {
+    public D713(int id) {
         this.id = id + 1;
         this.puntos = 0;
         this.golesF = 0;
@@ -23,7 +23,7 @@ public class FaseGrupos implements Comparable<FaseGrupos> {
     }
 
     @Override
-    public int compareTo(FaseGrupos o) {
+    public int compareTo(D713 o) {
         int puntos = o.puntos - this.puntos;
         if (puntos == 0) {
             int diferencia = o.diferenciaGoles() - this.diferenciaGoles();
@@ -51,7 +51,7 @@ public class FaseGrupos implements Comparable<FaseGrupos> {
         if (this == obj) return true;
         if (obj == null) return false;
         if (getClass() != obj.getClass()) return false;
-        final FaseGrupos other = (FaseGrupos)obj;
+        final D713 other = (D713)obj;
         if (this.puntos != other.puntos) return false;
         if (this.diferenciaGoles() != other.diferenciaGoles()) return false;
         if (this.golesF != other.golesF) return false;
@@ -59,19 +59,19 @@ public class FaseGrupos implements Comparable<FaseGrupos> {
     }
 
     public static void main(String[] args) throws IOException {
-        FaseGrupos[] faseGrupos;
-        Set<FaseGrupos> clasificados;
+        D713[] faseGrupos;
+        Set<D713> clasificados;
         Scanner sc = new Scanner(System.in);
         while (sc.hasNext()) {
             int equipos = Integer.parseInt(sc.next());
             int cantidadClasificados = Integer.parseInt(sc.next());
             
-            faseGrupos = new FaseGrupos[equipos];
+            faseGrupos = new D713[equipos];
 
-            for (int i = 0; i < equipos; i++) faseGrupos[i] = new FaseGrupos(i);
+            for (int i = 0; i < equipos; i++) faseGrupos[i] = new D713(i);
             
             int partidosTotales = equipos * (equipos - 1) / 2;
-            FaseGrupos equipoLocal, equipoVisitante;
+            D713 equipoLocal, equipoVisitante;
             int golesLocal, golesVisitante;
 
             for (int partidosJugados = 0; partidosJugados < partidosTotales; partidosJugados++) { 
@@ -103,7 +103,7 @@ public class FaseGrupos implements Comparable<FaseGrupos> {
             clasificados = new LinkedHashSet<>(Arrays.asList(Arrays.copyOfRange(faseGrupos, 0, cantidadClasificados + 1)));
             if (clasificados.size() != cantidadClasificados + 1) empate = true;
             else {
-                for (FaseGrupos equipo : faseGrupos) {
+                for (D713 equipo : faseGrupos) {
                     salida += equipo.id + " ";
                     if (--cantidadClasificados == 0) break;
                 }

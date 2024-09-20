@@ -3,7 +3,7 @@ import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Encrucijada {
+public class D708 {
     
     private static Long next() throws IOException {
         int input;

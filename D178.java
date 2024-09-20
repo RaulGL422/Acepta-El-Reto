@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class QuintoMilenio {
+public class D178 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int casos = sc.nextInt();
