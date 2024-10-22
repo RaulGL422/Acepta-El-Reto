@@ -42,7 +42,7 @@ public class D599 {
 
             int duracionCara = sc.nextInt();
 
-            List<Cancion> canciones = new ArrayList<>()
+            List<Cancion> canciones = new ArrayList<>();
 
           
             while (casets-- != 0) {
